@@ -1,0 +1,10 @@
+<ion-view view-title="Map">
+  <ion-content>
+      <div class="mapWrapper" ng-app="mapsApp" ng-controller="MapCtrl">
+        <div id="map" style="border: 1px solid red"></div>
+            <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+                <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+            </div>
+        </div>
+  </ion-content>
+</ion-view>
